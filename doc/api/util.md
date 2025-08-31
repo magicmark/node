@@ -131,18 +131,18 @@ FOO 3245: hello from foo [123]
 where `3245` is the process id. If it is not run with that
 environment variable set, then it will not print anything.
 
-The `section` supports wildcard also:
+The `section` supports wildcards also:
 
 ```mjs
 import { debuglog } from 'node:util';
-const log = debuglog('foo');
+const log = debuglog('foo-bar');
 
 log('hi there, it\'s foo-bar [%d]', 2333);
 ```
 
 ```cjs
 const { debuglog } = require('node:util');
-const log = debuglog('foo');
+const log = debuglog('foo-bar');
 
 log('hi there, it\'s foo-bar [%d]', 2333);
 ```
